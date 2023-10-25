@@ -52,7 +52,7 @@ provide-module sal %§
     '(?![^\s;:"\(\)\[\]\{\}])' fill comment
 
   add-highlighter shared/sal/hash region \
-    '(?<![^\s;:"\(\)\[\]\{\}'',@\$%])#(?:\\[\S]?|[^\$_;"\(\[\{])' \
+    '(?<![^\s;:"\(\)\[\]\{\}'',@\$%])#(?:\\[\S]?|[^\$_;''"\(\[\{])' \
     '(?![^\s;:"\(\)\[\]\{\}])' regions
 
   add-highlighter shared/sal/hash/invalid default-region fill Error
