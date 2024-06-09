@@ -4,11 +4,11 @@ hook global BufCreate .+\.sal(?:em)? %{
   set-option buffer filetype sal
 }
 
-hook global WinSetOption filetype=sal %{
+hook global BufSetOption filetype=sal %{
   require-module sal
-  add-highlighter window/sal ref sal
-  hook -once -always window WinSetOption filetype=.* %{
-    remove-highlighter window/sal
+  add-highlighter buffer/sal ref sal
+  hook -once -always window BufSetOption filetype=.* %{
+    remove-highlighter buffer/sal
   }
 }
 
